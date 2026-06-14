@@ -102,7 +102,6 @@ header {
 }
 
 .nav-links a:hover {
-    /* color: var(--accent-3); */
     background: linear-gradient(90deg,
             var(--accent-1),
             var(--accent-2),

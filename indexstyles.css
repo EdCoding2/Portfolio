@@ -286,15 +286,6 @@ header {
 .project-card:hover {
 
     background: var(--card-hover);
-    /* background: linear-gradient(135deg,
-            var(--accent-3),
-            var(--accent-1),
-            var(--accent-2));
-
-    box-shadow: var(--glow);
-
-    transform: translateY(-7px);
-    */
     box-shadow:
         0 0 20px rgba(139, 92, 246, .25); 
 

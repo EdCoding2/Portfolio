@@ -2,7 +2,7 @@
    Global Styles
 ========================== */
 
-:root {
+:root, :root[data-theme="defaut"]{
     --bg: #0b1020;
     --bg-alt: #121a33;
 
@@ -19,6 +19,152 @@
     --card-hover: rgba(26, 36, 70, 0.92);
 
     --glow: 0 0 25px rgba(56, 189, 248, 0.25);
+    --color-accent: #2cb15f;
+}
+
+/*Midnight theme*/
+
+:root[data-theme="midnight"] {
+    --bg: #07050f;
+    --bg-alt: #0f0a1e;
+
+    --text: #e4dcff;
+    --text-muted: #9d8fd4;
+
+    --border: rgba(139, 92, 246, 0.18);
+
+    --accent-1: #a855f7;
+    --accent-2: #7c3aed;
+    --accent-3: #c084fc;
+
+    --card: rgba(15, 10, 30, 0.82);
+    --card-hover: rgba(25, 16, 50, 0.92);
+
+    --glow: 0 0 25px rgba(139, 92, 246, 0.3);
+}
+
+/*Forest theme*/
+
+:root[data-theme="forest"] {
+    --bg: #060e08;
+    --bg-alt: #0c1a0e;
+
+    --text: #d8f0dc;
+    --text-muted: #7aab82;
+
+    --border: rgba(74, 160, 90, 0.18);
+
+    --accent-1: #22c55e;
+    --accent-2: #4ade80;
+    --accent-3: #f59e0b;
+
+    --card: rgba(12, 26, 14, 0.82);
+    --card-hover: rgba(18, 38, 20, 0.92);
+
+    --glow: 0 0 25px rgba(34, 197, 94, 0.25);
+}
+
+/*Sunset theme*/
+
+:root[data-theme="sunset"] {
+    --bg: #100608;
+    --bg-alt: #1e0d0a;
+
+    --text: #ffe8e0;
+    --text-muted: #c4826a;
+
+    --border: rgba(251, 113, 60, 0.18);
+
+    --accent-1: #f97316;
+    --accent-2: #fb923c;
+    --accent-3: #fb7185;
+
+    --card: rgba(30, 13, 10, 0.82);
+    --card-hover: rgba(45, 18, 12, 0.92);
+
+    --glow: 0 0 25px rgba(249, 115, 22, 0.28);
+}
+
+/*Ocean theme*/
+
+:root[data-theme="ocean"] {
+    --bg: #020d14;
+    --bg-alt: #041d2e;
+
+    --text: #d0f0f8;
+    --text-muted: #5a9bb0;
+
+    --border: rgba(20, 180, 220, 0.18);
+
+    --accent-1: #06b6d4;
+    --accent-2: #22d3ee;
+    --accent-3: #0ea5e9;
+
+    --card: rgba(4, 29, 46, 0.82);
+    --card-hover: rgba(6, 42, 66, 0.92);
+
+    --glow: 0 0 25px rgba(6, 182, 212, 0.28);
+}
+
+/*Cherry theme*/
+
+:root[data-theme="cherry"] {
+    --bg: #0d0406;
+    --bg-alt: #1a0608;
+
+    --text: #ffe0e6;
+    --text-muted: #b06070;
+
+    --border: rgba(220, 50, 80, 0.18);
+
+    --accent-1: #e11d48;
+    --accent-2: #f43f5e;
+    --accent-3: #fb7185;
+
+    --card: rgba(26, 6, 10, 0.82);
+    --card-hover: rgba(40, 8, 14, 0.92);
+
+    --glow: 0 0 25px rgba(225, 29, 72, 0.3);
+}
+
+/*Sakura theme*/
+
+:root[data-theme="sakura"] {
+    --bg: #0e080d;
+    --bg-alt: #1c1018;
+
+    --text: #fce8f4;
+    --text-muted: #b880a8;
+
+    --border: rgba(216, 120, 180, 0.18);
+
+    --accent-1: #ec4899;
+    --accent-2: #f472b6;
+    --accent-3: #c084fc;
+
+    --card: rgba(28, 16, 24, 0.82);
+    --card-hover: rgba(40, 22, 34, 0.92);
+
+    --glow: 0 0 25px rgba(236, 72, 153, 0.28);
+}
+
+/* Smooth transitions when switching */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Active theme card indicator */
+.theme-card.active-theme {
+  outline: 2px solid var(--color-accent);
+}
+
+.theme-card.active-theme .theme-button {
+  background-color: var(--color-accent);
+  cursor: default;
+}
+
+.theme-card.active-theme .theme-button::after {
+  content: " ✓";
 }
 
 * {
@@ -327,6 +473,106 @@ header {
         background-position: 300%;
     }
 }
+
+/* ==========================
+   Themes Menu
+========================== */
+
+#themes-menu {
+
+    position: fixed;
+
+    top: 0;
+    right: -50vw;
+
+    width: 50vw;
+    height: 100vh;
+
+    background: rgba(11, 16, 32, .95);
+
+    backdrop-filter: blur(20px);
+
+    border-left: 1px solid var(--border);
+
+    overflow-y: auto;
+
+    transition: .4s ease;
+
+    z-index: 1000;
+}
+
+#themes-menu.open {
+
+    right: 0;
+
+}
+
+.themes-menu-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 1.5rem;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.themes-menu-header h1 {
+
+    color: var(--accent-2);
+
+}
+
+#close-themes-menu {
+
+    background: none;
+
+    border: none;
+
+    color: var(--text);
+
+    font-size: 1.7rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+#close-themes-menu:hover {
+
+    color: var(--accent-3);
+
+}
+
+.theme-card img {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    margin-bottom: 1rem;
+
+    border: 1px solid var(--border);
+
+}
+
+@media (max-width: 768px) {
+
+    #themes-menu {
+
+        width: 100vw;
+
+        right: -100vw;
+
+    }
+
+}
+
 /* ==========================
    Themes Section
 ========================== */
@@ -435,13 +681,13 @@ header {
    Theme Previews
 ========================== */
 
-#simple-dark-blue-theme h3 {
+#default-theme h3 {
     color: #2563eb;
     
 }
 
 #midnight-theme h3 {
-    color: #60a5fa;
+    color: #a855f7;
 }
 
 #forest-theme h3 {
@@ -452,6 +698,17 @@ header {
     color: #fb7185;
 }
 
+#ocean-theme h3{
+    color: #38bdf8; 
+}
+
+#cherry-theme h3{
+    color:#f43f5e;
+}
+
+#sakura-theme h3{
+    color:#f472b6;
+}
 /* ==========================
    Footer
 ========================== */

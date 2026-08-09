@@ -609,11 +609,65 @@ header {
 
     transform: translateY(-7px);
 
-    background: var(--card-hover);
-
     box-shadow:
             0 0 20px rgba(139,92,246,.25);
 
+}
+
+#default-theme {
+    background: rgba(18, 26, 51, 0.82);
+}
+
+#default-theme:hover {
+    background: rgba(26, 36, 70, 0.92);
+}
+
+#midnight-theme {
+    background: rgba(15, 10, 30, 0.82);
+}
+
+#midnight-theme:hover {
+    background: rgba(25, 16, 50, 0.92);
+}
+
+#forest-theme {
+    background: rgba(12, 26, 14, 0.82);
+}
+
+#forest-theme:hover {
+    background: rgba(18, 38, 20, 0.92);
+}
+
+#sunset-theme {
+    background: rgba(30, 13, 10, 0.82);
+}
+
+#sunset-theme:hover {
+    background: rgba(45, 18, 12, 0.92);
+}
+
+#ocean-theme {
+    background: rgba(4, 29, 46, 0.82);
+}
+
+#ocean-theme:hover {
+    background: rgba(6, 42, 66, 0.92);
+}
+
+#cherry-theme {
+    background: rgba(26, 6, 10, 0.82);
+}
+
+#cherry-theme:hover {
+    background: rgba(40, 8, 14, 0.92);
+}
+
+#sakura-theme {
+    background: rgba(28, 16, 24, 0.82);
+}
+
+#sakura-theme:hover {
+    background: rgba(40, 22, 34, 0.92);
 }
 
 .theme-card h3 {
@@ -667,7 +721,7 @@ header {
             box-shadow .3s;
 }
 
-.theme-button:hover {
+/* .theme-button:hover {
 
     transform: translateY(-3px);
 
@@ -675,9 +729,174 @@ header {
             0 0 20px rgba(139,92,246,.5),
             0 0 35px rgba(56,189,248,.35);
 
+} */
+
+#default-theme .theme-button:hover{
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(139,92,246,.5),
+            0 0 35px rgba(56,189,248,.35);
 }
 
-/* ==========================
+#midnight-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(168, 85, 247, .5),
+            0 0 35px rgba(124, 58, 237, .35);
+}
+
+#forest-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(34, 197, 94, .5),
+            0 0 35px rgba(74, 222, 128, .35);
+}
+
+#sunset-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(249, 115, 22, .5),
+            0 0 35px rgba(251, 146, 60, .35);
+}
+
+#ocean-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(6, 182, 212, .5),
+            0 0 35px rgba(34, 211, 238, .35);
+}
+
+#ash-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(160, 168, 192, .4),
+            0 0 35px rgba(200, 208, 232, .25);
+}
+
+#cherry-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(225, 29, 72, .5),
+            0 0 35px rgba(244, 63, 94, .35);
+}
+
+#mocha-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(217, 119, 6, .5),
+            0 0 35px rgba(245, 158, 11, .35);
+}
+
+#sakura-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(236, 72, 153, .5),
+            0 0 35px rgba(244, 114, 182, .35);
+}
+
+#neon-theme .theme-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 0 20px rgba(163, 230, 53, .55),
+            0 0 35px rgba(232, 121, 249, .4);
+}
+/* ==== */
+
+#default-theme .theme-button {
+    background: linear-gradient(135deg, #8b5cf6, #38bdf8);
+}
+
+#midnight-theme .theme-button {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+}
+
+#forest-theme .theme-button {
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+}
+
+#sunset-theme .theme-button {
+    background: linear-gradient(135deg, #f97316, #fb923c);
+}
+
+#ocean-theme .theme-button {
+    background: linear-gradient(135deg, #06b6d4, #22d3ee);
+}
+
+#cherry-theme .theme-button {
+    background: linear-gradient(135deg, #e11d48, #f43f5e);
+}
+
+#sakura-theme .theme-button {
+    background: linear-gradient(135deg, #ec4899, #f472b6);
+}
+
+#default-theme {
+    border-color: rgba(59, 130, 246, 0.35);
+}
+
+#default-theme:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, .25);
+}
+
+#midnight-theme {
+    border-color: rgba(168, 85, 247, 0.35);
+}
+
+#midnight-theme:hover {
+    box-shadow: 0 0 20px rgba(168, 85, 247, .25);
+}
+
+#forest-theme {
+    border-color: rgba(34, 197, 94, 0.35);
+}
+
+#forest-theme:hover {
+    box-shadow: 0 0 20px rgba(34, 197, 94, .25);
+}
+
+#sunset-theme {
+    border-color: rgba(249, 115, 22, 0.35);
+}
+
+#sunset-theme:hover {
+    box-shadow: 0 0 20px rgba(249, 115, 22, .25);
+}
+
+#ocean-theme {
+    border-color: rgba(6, 182, 212, 0.35);
+}
+
+#ocean-theme:hover {
+    box-shadow: 0 0 20px rgba(6, 182, 212, .25);
+}
+
+#cherry-theme {
+    border-color: rgba(225, 29, 72, 0.35);
+}
+
+#cherry-theme:hover {
+    box-shadow: 0 0 20px rgba(225, 29, 72, .25);
+}
+
+#sakura-theme {
+    border-color: rgba(236, 72, 153, 0.35);
+}
+
+#sakura-theme:hover {
+    box-shadow: 0 0 20px rgba(236, 72, 153, .25);
+}
+
+/* ========================
    Theme Previews
 ========================== */
 

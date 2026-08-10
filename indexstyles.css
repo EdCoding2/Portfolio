@@ -167,6 +167,71 @@
   content: " ✓";
 }
 
+/* Theme images */
+
+:root[data-theme="default"] .hero {
+    background-image:
+        /* linear-gradient(rgba(11, 16, 32, 0.75), rgba(11, 16, 32, 0.75)), */
+        url('ThemeImages/Defaut.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root[data-theme="midnight"] .hero {
+    background-image:
+        /* linear-gradient(rgba(7, 5, 15, 0.75), rgba(7, 5, 15, 0.75)), */
+        url('ThemeImages/Midnight.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root[data-theme="forest"] .hero {
+    background-image:
+        linear-gradient(rgba(6, 14, 8, 0.75), rgba(6, 14, 8, 0.75)),
+        url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root[data-theme="sunset"] .hero {
+    background-image:
+        linear-gradient(rgba(16, 6, 8, 0.75), rgba(16, 6, 8, 0.75)),
+        url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root[data-theme="ocean"] .hero {
+    background-image:
+        linear-gradient(rgba(2, 13, 20, 0.75), rgba(2, 13, 20, 0.75)),
+        url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root[data-theme="cherry"] .hero {
+    background-image:
+        linear-gradient(rgba(13, 4, 6, 0.75), rgba(13, 4, 6, 0.75)),
+        url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root[data-theme="sakura"] .hero {
+    background-image:
+        linear-gradient(rgba(14, 8, 13, 0.75), rgba(14, 8, 13, 0.75)),
+        url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 * {
     margin: 0;
     padding: 0;

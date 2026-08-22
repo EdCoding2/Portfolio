@@ -35,6 +35,17 @@
 
 // ===== THEME SYSTEM =====
 
+BackgroundEngine.setup([
+    { containerId: 'home',     canvasIds: ['hero-bg-a', 'hero-bg-b'],         variant: 'hero' },
+    { containerId: 'about',    canvasIds: ['about-bg-a', 'about-bg-b'],       variant: 'about' },
+    { containerId: 'projects', canvasIds: ['projects-bg-a', 'projects-bg-b'], variant: 'projects' },
+    { containerId: 'contact',  canvasIds: ['contact-bg-a', 'contact-bg-b'],   variant: 'contact' },
+], {
+    default: ThemeDefault,
+});
+
+BackgroundEngine.start(localStorage.getItem('portfolio-theme') || 'default');
+
 const THEME_MAP = {
     "default-theme": "default",
     "midnight-theme": "midnight",
@@ -49,6 +60,7 @@ function applyTheme(themeName) {
     document.documentElement.setAttribute("data-theme", themeName);
     localStorage.setItem("portfolio-theme", themeName);
     updateActiveThemeCard(themeName);
+    BackgroundEngine.switchTheme(themeName);
 }
 
 function updateActiveThemeCard(themeName) {

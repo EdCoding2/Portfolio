@@ -1,4 +1,36 @@
 /* ==========================
+   Canvas
+========================== */
+
+.hero,
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.bg-canvas.active {
+    opacity: 1;
+}
+
+
+/* ==========================
    Global Styles
 ========================== */
 
@@ -166,13 +198,13 @@
 .theme-card.active-theme .theme-button::after {
   content: " ✓";
 }
-
-/* Theme images */
+/* 
+Hero section theme images
 
 :root[data-theme="default"] .hero {
     background-image:
-        /* linear-gradient(rgba(11, 16, 32, 0.75), rgba(11, 16, 32, 0.75)), */
-        url('ThemeImages/Defaut.jpg');
+        linear-gradient(rgba(11, 16, 32, 0.75), rgba(11, 16, 32, 0.75)), <- commented
+        url('ThemeImages/Defaut.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -180,8 +212,8 @@
 
 :root[data-theme="midnight"] .hero {
     background-image:
-        /* linear-gradient(rgba(7, 5, 15, 0.75), rgba(7, 5, 15, 0.75)), */
-        url('ThemeImages/Midnight.jpg');
+        linear-gradient(rgba(7, 5, 15, 0.75), rgba(7, 5, 15, 0.75)), 
+        url('ThemeImages/Midnight.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -217,7 +249,7 @@
 :root[data-theme="cherry"] .hero {
     background-image:
         linear-gradient(rgba(13, 4, 6, 0.75), rgba(13, 4, 6, 0.75)),
-        url('');
+        url('ThemeImages/Cherry.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -230,7 +262,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
 * {
     margin: 0;
@@ -341,6 +373,23 @@ header {
     text-align: center;
 
     padding: 2rem;
+
+    position: relative;
+}
+
+.wave-highlight {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* keeps your text above the highlight layer */
 }
 
 .hero-content h2 {
